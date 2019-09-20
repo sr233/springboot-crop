@@ -1,0 +1,979 @@
+1229 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [test.shirui.config.test], using SpringBootContextLoader
+1246 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [test.shirui.config.test]: no resource found for suffixes {-context.xml, Context.groovy}.
+1247 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [test.shirui.config.test]: test does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+1783 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration test.shirui.Application for test class test.shirui.config.test
+2105 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener]
+2134 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@54dcfa5a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1817f1eb, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@767e20cf, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3a3e78f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@301ec38b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@17a1e4ca, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@10ded6a9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@c5dc4a2]
+3557 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.IncludeAction - One of "path", "resource" or "url" attributes must be set.
+ERROR in ch.qos.logback.core.joran.action.IncludeAction - One of "path", "resource" or "url" attributes must be set.
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:276)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:237)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:200)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:173)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:74)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:364)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.IncludeAction - One of "path", "resource" or "url" attributes must be set.
+ERROR in ch.qos.logback.core.joran.action.IncludeAction - One of "path", "resource" or "url" attributes must be set.
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithSpecificConfig(AbstractLoggingSystem.java:67)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:57)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:117)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:269)
+	... 38 common frames omitted
+3562 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@54dcfa5a] to prepare test instance [test.shirui.config.test@5b408dc3]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.IncludeAction - One of "path", "resource" or "url" attributes must be set.
+ERROR in ch.qos.logback.core.joran.action.IncludeAction - One of "path", "resource" or "url" attributes must be set.
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:276)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:237)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:200)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:173)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:74)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:364)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 24 common frames omitted
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.IncludeAction - One of "path", "resource" or "url" attributes must be set.
+ERROR in ch.qos.logback.core.joran.action.IncludeAction - One of "path", "resource" or "url" attributes must be set.
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithSpecificConfig(AbstractLoggingSystem.java:67)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:57)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:117)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:269)
+	... 38 common frames omitted
+1353 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [test.shirui.config.test], using SpringBootContextLoader
+1372 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [test.shirui.config.test]: no resource found for suffixes {-context.xml, Context.groovy}.
+1375 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [test.shirui.config.test]: test does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+1720 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration test.shirui.Application for test class test.shirui.config.test
+2061 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener]
+2097 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24d09c1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@54c62d71, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@65045a87, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@47f4e407, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2d1dee39, org.springframework.test.context.transaction.TransactionalTestExecutionListener@48d5f34e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@fc258b1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6ff65192]
+2904 [main] INFO  test.shirui.config.test - Starting test on SR with PID 11480 (started by SR in D:\Workplcae_Idea\demo)
+2918 [main] INFO  test.shirui.config.test - No active profile set, falling back to default profiles: default
+3013 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1849db1a: startup date [Fri Jun 28 14:49:53 CST 2019]; root of context hierarchy
+7327 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$23487e5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+7682 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$a2c8cb8d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+8740 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+31040 [main] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:324)
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:123)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider.getDefaultDdlAuto(HibernateDefaultDdlAutoProvider.java:42)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.lambda$getVendorProperties$0(HibernateJpaConfiguration.java:132)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:53)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.determineDdlAuto(JpaProperties.java:247)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.getAdditionalProperties(JpaProperties.java:216)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.access$000(JpaProperties.java:169)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.getHibernateProperties(JpaProperties.java:153)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:134)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:136)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$421f40ca.CGLIB$entityManagerFactory$10(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$421f40ca$$FastClassBySpringCGLIB$$4666fd5c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:365)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$421f40ca.entityManagerFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 86 common frames omitted
+31138 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+31189 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+31420 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+31430 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+31531 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+32050 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+54076 [main] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:88)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:259)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:233)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:210)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:242)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:210)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.handleTypes(MetadataBuildingProcess.java:352)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:111)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:861)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:888)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 82 common frames omitted
+54091 [main] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+54122 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+54164 [main] INFO  o.h.e.j.e.i.LobCreatorBuilderImpl - HHH000422: Disabling contextual LOB creation as connection was null
+54896 [main] WARN  org.hibernate.id.UUIDHexGenerator - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+55593 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+55987 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+77991 [main] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:324)
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:123)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.lambda$isInitializingDatabase$0(DataSourceInitializedPublisher.java:95)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:53)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.determineDdlAuto(JpaProperties.java:247)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.getAdditionalProperties(JpaProperties.java:216)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.access$000(JpaProperties.java:169)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.getHibernateProperties(JpaProperties.java:153)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.isInitializingDatabase(DataSourceInitializedPublisher.java:97)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:77)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:70)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.postProcessObjectFromFactoryBean(AbstractAutowireCapableBeanFactory.java:1841)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:116)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getObjectForBeanInstance(AbstractAutowireCapableBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:257)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:367)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:110)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:625)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:444)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:312)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:131)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:583)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:583)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 118 common frames omitted
+79792 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+79970 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/crop/findAll],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> test.shirui.data.controller.CropController.findAll(test.shirui.data.model.CropCerteria)
+80001 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/crop/findById/{id}],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> test.shirui.data.controller.CropController.findById(java.lang.String)
+80009 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/crop/download/{fileName}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> test.shirui.data.controller.CropController.downloadFile(java.lang.String)
+80011 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/crop/uploadFile],consumes=[multipart/form-data || multipart/*]}" onto public java.util.Map<java.lang.String, java.lang.Object> test.shirui.data.controller.CropController.uploadFile(org.springframework.web.multipart.MultipartFile)
+80020 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/test],methods=[POST]}" onto public java.lang.Object test.shirui.data.controller.TestController.test(java.lang.String)
+80022 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+80031 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+80033 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+80034 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+80048 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+80055 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+81072 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoint(s) beneath base path '/actuator'
+81108 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/auditevents],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81111 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/beans],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81120 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81121 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/conditions],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81121 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/configprops],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81122 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/env],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81130 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/env/{toMatch}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81131 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81132 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/loggers],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81133 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/loggers/{name}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81133 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/loggers/{name}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81135 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/heapdump],methods=[GET],produces=[application/octet-stream]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81137 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/threaddump],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81137 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/metrics],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81143 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/metrics/{requiredMetricName}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81143 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/scheduledtasks],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81145 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/httptrace],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81146 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/mappings],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+81148 [main] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+82351 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+83517 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1849db1a: startup date [Fri Jun 28 14:49:53 CST 2019]; root of context hierarchy
+84104 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+84110 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+85590 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+85682 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found {0} custom documentation plugin(s)
+85707 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+85739 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85744 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85759 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85759 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85766 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85766 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85767 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85767 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85767 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85768 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85768 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85768 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85780 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85781 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85782 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85782 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85782 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85782 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85783 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85783 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85790 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85790 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85791 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85791 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85791 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85791 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85792 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85792 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85793 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85794 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85797 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85798 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85799 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85800 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85800 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+85800 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: handle belongs to groups: [[ResourceGroup{groupName='operation-handler', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler}]] 
+85808 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method links was web-mvc-endpoint-handler-mapping
+85808 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: links belongs to groups: [[ResourceGroup{groupName='web-mvc-endpoint-handler-mapping', position=0, controller=org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping}]] 
+85814 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method downloadFile was 作物
+85814 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: downloadFile belongs to groups: [[ResourceGroup{groupName='作物', position=0, controller=test.shirui.data.controller.CropController}]] 
+85821 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method findAll was 作物
+85822 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: findAll belongs to groups: [[ResourceGroup{groupName='作物', position=0, controller=test.shirui.data.controller.CropController}]] 
+85822 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method findById was 作物
+85822 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: findById belongs to groups: [[ResourceGroup{groupName='作物', position=0, controller=test.shirui.data.controller.CropController}]] 
+85823 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+85823 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: uploadFile belongs to groups: [[ResourceGroup{groupName='作物', position=0, controller=test.shirui.data.controller.CropController}]] 
+85823 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+85824 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: error belongs to groups: [[ResourceGroup{groupName='basic-error-controller', position=0, controller=org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController}]] 
+85824 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+85825 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: errorHtml belongs to groups: [[ResourceGroup{groupName='basic-error-controller', position=0, controller=org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController}]] 
+85825 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method test was 测试
+85825 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Request mapping: test belongs to groups: [[ResourceGroup{groupName='测试', position=0, controller=test.shirui.data.controller.TestController}]] 
+85835 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Created resource listing Path: /default/web-mvc-endpoint-handler-mapping Description: web-mvc-endpoint-handler-mapping Position: 0
+85838 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Created resource listing Path: /default/作物 Description: 作物 Position: 0
+85840 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Created resource listing Path: /default/测试 Description: 测试 Position: 0
+85841 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Created resource listing Path: /default/basic-error-controller Description: basic-error-controller Position: 0
+85843 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Created resource listing Path: /default/operation-handler Description: operation-handler Position: 0
+85909 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.Object>(true)
+85910 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.Object>(true)
+85954 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.Object>(true)
+85954 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.Object>(true)
+85969 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /error.org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error.DefaultGenericTypeNamingStrategy
+85969 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /error.org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error.DefaultGenericTypeNamingStrategy
+85994 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+86002 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+86022 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+86025 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+86029 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+86048 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+86050 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+86052 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+86056 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+86060 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+86064 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+86068 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+86071 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+86074 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+86078 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+86088 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method error was basic-error-controller
+86101 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: org.springframework.web.servlet.ModelAndView(true)
+86101 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key org.springframework.web.servlet.ModelAndView(true)
+86104 [main] INFO  s.d.s.p.ModelPropertiesKeyGenerator - Cache key generated: org.springframework.web.servlet.ModelAndView(true)
+86111 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key org.springframework.web.servlet.ModelAndView(true)
+86210 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: org.springframework.web.servlet.ModelAndView(true)
+86210 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key org.springframework.web.servlet.ModelAndView(true)
+86210 [main] INFO  s.d.s.p.ModelPropertiesKeyGenerator - Cache key generated: org.springframework.web.servlet.ModelAndView(true)
+86211 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key org.springframework.web.servlet.ModelAndView(true)
+86213 [main] INFO  s.d.s.p.ModelPropertiesKeyGenerator - Cache key generated: org.springframework.web.servlet.View(true)
+86213 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key org.springframework.web.servlet.View(true)
+86217 [main] INFO  s.d.s.p.ModelPropertiesKeyGenerator - Cache key generated: org.springframework.web.servlet.View(true)
+86218 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key org.springframework.web.servlet.View(true)
+86219 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /error.org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml.DefaultGenericTypeNamingStrategy
+86219 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /error.org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml.DefaultGenericTypeNamingStrategy
+86220 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+86222 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+86225 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+86226 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+86227 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+86228 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+86229 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+86231 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+86234 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+86237 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+86243 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+86246 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+86248 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+86249 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+86256 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+86258 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method errorHtml was basic-error-controller
+86318 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86318 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86318 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86319 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86319 [main] INFO  s.d.s.p.ModelPropertiesKeyGenerator - Cache key generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86319 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key java.util.Map<java.lang.String,java.lang.String>(false)
+86320 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86321 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86321 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86322 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86322 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/auditevents.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86322 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/auditevents.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86340 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86341 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86343 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86344 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86344 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86344 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86345 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86345 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86345 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86345 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86346 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/beans.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86354 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/beans.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86361 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86363 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86364 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_1
+86366 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86366 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86367 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86367 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86367 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86368 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86369 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86369 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86371 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/conditions.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86371 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/conditions.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86374 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86375 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86375 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_2
+86378 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86378 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86378 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86378 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86379 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86379 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86379 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86379 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86379 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/configprops.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86380 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/configprops.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86382 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86383 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86384 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_3
+86386 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86386 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86386 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86387 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86387 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86387 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86391 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86392 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86392 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/env/{toMatch}.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86392 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/env/{toMatch}.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86394 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86396 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86396 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_4
+86399 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86399 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86399 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86399 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86400 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86400 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86400 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86400 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86401 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/env.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86401 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/env.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86403 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86405 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86405 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_5
+86407 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86411 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86411 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86412 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86412 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86412 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86412 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86413 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86420 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/health.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86420 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/health.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86422 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86424 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86424 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_6
+86426 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86426 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86426 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86426 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86427 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86427 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86427 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86427 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86428 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/heapdump.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86428 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/heapdump.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86431 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86432 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86433 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_7
+86435 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86435 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86436 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86436 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86436 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86437 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86437 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86437 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86438 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/httptrace.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86439 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/httptrace.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86442 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86443 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86444 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_8
+86447 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86447 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86448 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86448 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86448 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86449 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86461 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86461 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86461 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/info.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86461 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/info.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86465 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86499 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86500 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_9
+86501 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86501 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86502 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86502 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86503 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86503 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86503 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86503 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86503 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/loggers/{name}.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86503 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/loggers/{name}.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86505 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86507 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86508 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86508 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86509 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86509 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86509 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86509 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86510 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86510 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86510 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/loggers/{name}.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86510 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/loggers/{name}.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86513 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86513 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86514 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86514 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86515 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86515 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86515 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86515 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86516 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/loggers.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86516 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/loggers.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86518 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86521 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86522 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_10
+86524 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86524 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86524 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86524 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86524 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86525 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86525 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86525 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86526 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/mappings.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86526 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/mappings.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86528 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86532 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86533 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_11
+86535 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86535 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86535 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86536 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86536 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86536 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86537 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86537 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86537 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/metrics/{requiredMetricName}.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86537 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/metrics/{requiredMetricName}.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86539 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86540 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86541 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_12
+86542 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86542 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86542 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86543 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86543 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86543 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86543 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86543 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86544 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/metrics.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86545 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/metrics.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86548 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86549 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86549 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_13
+86551 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86551 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86551 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86551 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86552 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86552 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86552 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86552 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86552 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/scheduledtasks.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86552 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/scheduledtasks.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86570 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86571 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86572 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_14
+86573 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86573 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(false)
+86573 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(false)
+86573 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(false)
+86574 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86574 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86574 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86574 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86574 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator/threaddump.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86575 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator/threaddump.org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle.DefaultGenericTypeNamingStrategy
+86577 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86577 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method handle was operation-handler
+86578 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_15
+86629 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.util.Map<java.lang.String,org.springframework.boot.actuate.endpoint.web.Link>>(true)
+86629 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.util.Map<java.lang.String,org.springframework.boot.actuate.endpoint.web.Link>>(true)
+86629 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.Map<java.lang.String,java.util.Map<java.lang.String,org.springframework.boot.actuate.endpoint.web.Link>>(true)
+86630 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.util.Map<java.lang.String,org.springframework.boot.actuate.endpoint.web.Link>>(true)
+86632 [main] INFO  s.d.s.p.ModelPropertiesKeyGenerator - Cache key generated: org.springframework.boot.actuate.endpoint.web.Link(true)
+86633 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key org.springframework.boot.actuate.endpoint.web.Link(true)
+86636 [main] INFO  s.d.s.p.ModelPropertiesKeyGenerator - Cache key generated: java.util.Map<java.lang.String,org.springframework.boot.actuate.endpoint.web.Link>(true)
+86637 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key java.util.Map<java.lang.String,org.springframework.boot.actuate.endpoint.web.Link>(true)
+86637 [main] INFO  s.d.s.p.ModelPropertiesKeyGenerator - Cache key generated: java.util.Map<java.lang.String,java.util.Map<java.lang.String,org.springframework.boot.actuate.endpoint.web.Link>>(true)
+86637 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key java.util.Map<java.lang.String,java.util.Map<java.lang.String,org.springframework.boot.actuate.endpoint.web.Link>>(true)
+86638 [main] INFO  s.d.s.p.ModelPropertiesKeyGenerator - Cache key generated: org.springframework.boot.actuate.endpoint.web.Link(true)
+86639 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key org.springframework.boot.actuate.endpoint.web.Link(true)
+86639 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /actuator.org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links.DefaultGenericTypeNamingStrategy
+86639 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /actuator.org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links.DefaultGenericTypeNamingStrategy
+86642 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method links was web-mvc-endpoint-handler-mapping
+86644 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method links was web-mvc-endpoint-handler-mapping
+86652 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86652 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86653 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86653 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86653 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /crop/download/{fileName}.test.shirui.data.controller.CropController.downloadFile.DefaultGenericTypeNamingStrategy
+86653 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /crop/download/{fileName}.test.shirui.data.controller.CropController.downloadFile.DefaultGenericTypeNamingStrategy
+86657 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method downloadFile was 作物
+86660 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method downloadFile was 作物
+86668 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86668 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86668 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86668 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86668 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: test.shirui.data.model.CropCerteria(false)
+86669 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key test.shirui.data.model.CropCerteria(false)
+86669 [main] INFO  s.d.s.p.ModelPropertiesKeyGenerator - Cache key generated: test.shirui.data.model.CropCerteria(false)
+86669 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key test.shirui.data.model.CropCerteria(false)
+86671 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: test.shirui.data.model.CropCerteria(false)
+86671 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key test.shirui.data.model.CropCerteria(false)
+86672 [main] INFO  s.d.s.p.ModelPropertiesKeyGenerator - Cache key generated: test.shirui.data.model.CropCerteria(false)
+86672 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key test.shirui.data.model.CropCerteria(false)
+86672 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /crop/findAll.test.shirui.data.controller.CropController.findAll.DefaultGenericTypeNamingStrategy
+86673 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /crop/findAll.test.shirui.data.controller.CropController.findAll.DefaultGenericTypeNamingStrategy
+86676 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method findAll was 作物
+86679 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method findAll was 作物
+86684 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86685 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86685 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86685 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86685 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /crop/findById/{id}.test.shirui.data.controller.CropController.findById.DefaultGenericTypeNamingStrategy
+86686 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /crop/findById/{id}.test.shirui.data.controller.CropController.findById.DefaultGenericTypeNamingStrategy
+86689 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method findById was 作物
+86692 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method findById was 作物
+86694 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: org.springframework.web.multipart.MultipartFile(false)
+86694 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key org.springframework.web.multipart.MultipartFile(false)
+86699 [main] INFO  s.d.s.p.ModelPropertiesKeyGenerator - Cache key generated: org.springframework.web.multipart.MultipartFile(false)
+86700 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key org.springframework.web.multipart.MultipartFile(false)
+86704 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: org.springframework.web.multipart.MultipartFile(false)
+86704 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key org.springframework.web.multipart.MultipartFile(false)
+86705 [main] INFO  s.d.s.p.ModelPropertiesKeyGenerator - Cache key generated: org.springframework.web.multipart.MultipartFile(false)
+86705 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key org.springframework.web.multipart.MultipartFile(false)
+86706 [main] INFO  s.d.s.p.ModelPropertiesKeyGenerator - Cache key generated: java.io.InputStream(false)
+86706 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key java.io.InputStream(false)
+86708 [main] INFO  s.d.s.p.ModelPropertiesKeyGenerator - Cache key generated: java.io.InputStream(false)
+86708 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key java.io.InputStream(false)
+86709 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86710 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86737 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86738 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86738 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /crop/uploadFile.test.shirui.data.controller.CropController.uploadFile.DefaultGenericTypeNamingStrategy
+86739 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /crop/uploadFile.test.shirui.data.controller.CropController.uploadFile.DefaultGenericTypeNamingStrategy
+86742 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+86743 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+86751 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+86752 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+86753 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: uploadFileUsingPOST_1
+86756 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+86757 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+86758 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: uploadFileUsingPOST_2
+86761 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+86765 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+86766 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: uploadFileUsingPOST_3
+86769 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+86771 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+86771 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: uploadFileUsingPOST_4
+86774 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+86776 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+86778 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: uploadFileUsingPOST_5
+86781 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+86783 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+86784 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: uploadFileUsingPOST_6
+86787 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+86788 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method uploadFile was 作物
+86789 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: uploadFileUsingPOST_7
+86793 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(false)
+86793 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(false)
+86793 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(false)
+86794 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(false)
+86794 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86794 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(true)
+86795 [main] INFO  s.d.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(true)
+86795 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+86795 [main] INFO  s.d.s.web.OperationsKeyGenerator - Cache key generated: /test/test.test.shirui.data.controller.TestController.test.DefaultGenericTypeNamingStrategy
+86795 [main] INFO  s.d.s.web.caching.CachingAspect - Caching aspect applied for cache operations with key /test/test.test.shirui.data.controller.TestController.test.DefaultGenericTypeNamingStrategy
+86805 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method test was 测试
+86805 [main] INFO  s.d.s.w.ClassOrApiAnnotationResourceGrouping - Group for method test was 测试
+86849 [main] INFO  test.shirui.config.test - Started test in 84.644 seconds (JVM running for 88.241)
+86920 [Thread-4] INFO  o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@1849db1a: startup date [Fri Jun 28 14:49:53 CST 2019]; root of context hierarchy
+87044 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
